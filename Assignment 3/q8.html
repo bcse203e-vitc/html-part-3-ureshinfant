@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Booking Form</title>
+</head>
+<body>
+
+  <h1>Travel Booking Form</h1>
+
+  <form action="/submit-booking" method="post">
+
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br><br>
+
+    <label for="contact">Contact Information:</label><br>
+    <input type="text" id="contact" name="contact" required><br><br>
+
+    <label for="destination">Destination:</label><br>
+    <select id="destination" name="destination" required>
+      <option value="paris">Paris</option>
+      <option value="newyork">New York</option>
+      <option value="tokyo">Tokyo</option>
+      <option value="dubai">Dubai</option>
+    </select><br><br>
+
+    <label>Travel Dates:</label><br>
+    <input type="date" name="start-date" required> to 
+    <input type="date" name="end-date" required><br><br>
+
+    <label for="travelers">Number of Travelers:</label><br>
+    <input type="number" id="travelers" name="travelers" min="1" required><br><br>
+
+    <label>Travel Class:</label><br>
+    <input type="radio" id="economy" name="class" value="Economy">
+    <label for="economy">Economy</label><br>
+    <input type="radio" id="business" name="class" value="Business">
+    <label for="business">Business</label><br>
+    <input type="radio" id="first" name="class" value="First Class">
+    <label for="first">First Class</label><br><br>
+
+    <input type="checkbox" id="insurance" name="insurance">
+    <label for="insurance">Include Travel Insurance</label><br><br>
+
+    <label for="cost">Estimated Total Cost (static):</label><br>
+    <input type="text" id="cost" name="cost" value="$0.00" readonly><br><br>
+
+    <button type="submit">Book Now</button>
+
+  </form>
+
+</body>
+</html>
